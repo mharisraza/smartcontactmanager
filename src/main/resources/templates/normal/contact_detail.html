@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="normal/base::Layout(~{::section})">
+<head>
+<meta charset="UTF-8" />
+<title>Document</title>
+</head>
+<body>
+	<section>
+
+		<div
+			style="border-radius: 10px; margin-top: 70px; border-color: grey; box-shadow: 0 3px 10px rgb(0 0 0/ 0.2);"
+			class="card mr-5">
+
+			<div  class="card-body">
+			
+			<h1 th:unless="${contact}">Sorry, you don't have permission or it doesn't exist.</h1>
+
+				<div th:if="${contact}" class="container text-center">
+				
+				
+
+					<img style="height: 200px; width: 200px;"
+						th:src="@{'/contact_images/'+${contact.profileImage}}"
+						src="https://mdbootstrap.com/img/new/avatars/8.jpg" alt="">
+
+					<table class="table mt-3">
+						<thead>
+							<tr>
+								<th scope="col">Full Name</th>
+								<th scope="col">Email Address</th>
+								<th scope="col">Phone Number</th>
+								<th scope="col">Work</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th th:text="${contact.name}" scope="row"></th>
+								<th th:text="${contact.email}"></th>
+								<th th:text="${contact.phone}"></th>
+								<th th:text="${contact.work}"></th>
+					
+							</tr>				
+						</tbody>
+					</table>
+					
+					<div class="description">
+					
+					<th:block th:text="${contact.description}"></th:block>
+					
+					
+					</div>
+
+
+				</div>
+
+
+
+			</div>
+
+
+		</div>
+		
+		
+
+
+
+
+	</section>
+
+</body>
+</html>
