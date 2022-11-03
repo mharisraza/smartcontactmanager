@@ -5,7 +5,7 @@
 The Smart Contact Manager where you can add your contacts, view, update and delete them.
 With all the functionalities like Pagination, Search and Security.
 
-[USER PROFILE MODULE IS NOT COMPLETE].
+[SEARCH & USER PROFILE MODULE IS NOT COMPLETE].
 
 # Technology that use:
 
